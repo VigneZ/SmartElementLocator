@@ -38,6 +38,7 @@ function locateElement(searchText, options = {}) {
         const inferredType = getPreferredTypeFromSearchText(normalizedSearchText);
         if (inferredType) {
             type = inferredType;
+            searchText= searchText.replaceAll(type,"")
         }
     }
 
